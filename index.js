@@ -14,7 +14,7 @@ async function loadApp() {
         app.use(express.json());
        
         app.use("/posts", postsRouter);
-        app.listen(3001, () => console.log("Server is running at Port 3001"));
+        app.listen(process.env.PORT, () => console.log("Server is running at Port 3001"));
     } catch (err) {
         console.log(err);
         process.exit();
